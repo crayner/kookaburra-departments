@@ -1,0 +1,53 @@
+
+
+{% extends 'kookaburra.html.twig' %}
+
+{% set moduleName = 'Departments' %}
+{% set module = {'baseURL': 'departments', 'crumbs': [{uri: 'departments__list', name: 'Departments'}], title: department.name} %}
+{% set breadcrumbs = 'new' %}
+
+{% block content %}
+    {% if department.blurb is not same as ('') or role in ['Coordinator','Assistant Coordinator','Teacher (Curriculum)','Director','Manager'] %}
+        <h2>{{ 'Overview'|trans }}
+        {% if role in ['Coordinator','Assistant Coordinator','Teacher (Curriculum)','Director','Manager'] %}
+            <a href='{{ path('departments__edit', { department: department.id}) }}' title="{{ 'Edit Department'|trans }}" class="float-right"><span class="text-gray-600 far fa-edit fa-fw"></span></a>
+        {% endif %}
+        </h2>
+        <p>{{ department.blurb|raw }}</p>
+    {% endif %}
+    <h2>{{ 'Staff'|trans }}</h2>
+    <div class="flex flex-wrap rounded-sm bg-blue-100 border py-2">
+        {% if department.staff|length > 0 %}
+        {% for staff in department.staff %}
+            <div class="flex-col w-1/2 sm:w-1/4 md:w-1/5 my-2 text-center">
+                {% if canViewProfile %}
+                    <a href="{{ path('legacy', {q: '/modules/Staff/staff_view_details.php', gibbonPersonID: staff.person.id}) }}">
+                        <div>
+                            {% include 'components/person_photo.html.twig' with {person: staff.person, size: 'sm'} %}
+                        </div>
+                        <div class="text-xs font-bold mt-1">
+                           {{ staff.person.formatName(false, false, false, true, true)}}
+                        </div>
+                    </a>
+                {% else %}
+                    <div>
+                        {% include 'components/person_photo.html.twig' with {person: staff.person, size: 'sm'} %}
+                    </div>
+                    <div class="text-xs font-bold mt-1">
+                        {{ staff.person.formatName(false, false, false, true, true)}}
+                    </div>
+                {% endif %}
+
+                <div class="text-xs text-gray-600 italic leading-snug">
+                    {{ staff.role|trans }}
+                </div>
+
+            </div>
+        {% endfor %}
+        {% else %}
+        <div class="info w-full">
+            {{ 'No staff have been allocated this this department!'|trans }}
+        </div>
+        {% endif %}
+    </div>
+{% endblock content %}

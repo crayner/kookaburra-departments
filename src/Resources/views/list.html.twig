@@ -1,0 +1,40 @@
+
+
+{% extends 'kookaburra.html.twig' %}
+
+{% set moduleName = 'Departments' %}
+{% set module = {'baseURL': 'departments', 'crumbs': [],  'title': 'Departments'} %}
+{% set breadcrumbs = 'new' %}
+
+{% block content %}
+    <h2>{{ 'Learning Areas'|trans }}</h2>
+    <div class="flex flex-wrap py-2">
+        {% for department in departments if department.type is same as('Learning Area') %}
+            <div class="flex-col w-1/2 sm:w-1/3 text-center">
+                <a href="{{ path('departments__details', {department: department.id}) }}">
+                    <div>
+                        <img class="w-20 h-20 sm:w-32 sm:h-32 p-1 inline-block shadow bg-white border border-gray-600 " src="{{ asset(department.logo|default('/themes/'~ getThemeName() ~'/img/anonymous_125.jpg')) }}">
+                    </div>
+                    <div class="text-xs font-bold mt-1 mb-4">
+                        {{ department.name|trans }}
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <h2>{{ 'Administration'|trans }}</h2>
+    <div class="flex flex-wrap py-2">
+        {% for department in departments if department.type is same as('Administration') %}
+            <div class="flex-col w-1/2 sm:w-1/3 text-center">
+                <a href="{{ path('departments__details', {department: department.id}) }}">
+                    <div>
+                        <img class="w-20 h-20 sm:w-32 sm:h-32 p-1 inline-block shadow bg-white border border-gray-600 " src="{{ asset(department.logo|default('/themes/'~ getThemeName() ~'/img/anonymous_125.jpg')) }}">
+                    </div>
+                    <div class="text-xs font-bold mt-1 mb-4">
+                        {{ department.name|trans }}
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

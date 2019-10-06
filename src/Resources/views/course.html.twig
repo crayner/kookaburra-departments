@@ -1,0 +1,27 @@
+
+
+{% extends 'kookaburra.html.twig' %}
+
+{% set moduleName = 'Departments' %}
+{% set module = {'baseURL': 'departments', 'crumbs': [
+    {uri: 'departments__list', name: 'Departments'},
+    {uri: 'departments__details', uri_params: {department: department.id}, name: department.name}
+], title: course.name ~ extra} %}
+{% set breadcrumbs = 'new' %}
+
+{% block content %}
+    {% if course.description is not same as('') or role in ['Coordinator','Assistant Coordinator','Teacher (Curriculum)'] %}
+        <h2>{{ 'Overview'|trans }}
+        {% if role in ['Coordinator','Assistant Coordinator','Teacher (Curriculum)'] %}
+            <a href='{{ path('departments__course_edit', {course: course.id, department: department.id}) }}' title='{{ 'Edit'|trans }}'><span class="text-gray-600 far fa-edit" style="float:right;"></span></a>
+        {% endif %}
+        </h2>
+        {{ course.description|raw }}
+    {% endif %}
+
+    <h2>{{ 'Units'|trans }}</h2>
+    {% for unit in units %}
+        <h4>{{ unit.name }}</h4>
+        {{ unit.description|raw }}{{ unit.attachment is not same as('') ? '<br /><br /><a href="' ~ asset(unit.attachment) ~ '">' ~ 'Download Unit Outline'|trans ~ '</a>' : '' }}
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,40 @@
+
+
+{% extends 'kookaburra.html.twig' %}
+
+{% form_theme form
+    'form/kookaburra_form.html.twig'
+%}
+
+{% set moduleName = 'Departments' %}
+{% set module = {'baseURL': 'departments', 'crumbs': [
+    {uri: 'departments__list', name: 'Departments'},
+    {uri: 'departments__details', params: {department: department.id}, name: department.name},
+    {uri: 'departments__course_details', uri_params: {department: department.id, course: course.id}, name: course.nameShort}
+], title: 'Edit Course'|trans } %}
+{% set breadcrumbs = 'new' %}
+
+{% block content %}
+    {{ form_start(form) }}
+    <table class="smallIntBorder fullWidth standardForm relative" cellspacing="0">
+        <tbody>
+            <tr class="break flex flex-col sm:flex-row justify-between content-center p-0">
+                <td class="flex-grow justify-center px-2 border-b-0 sm:border-b border-t-0 ">
+                    <h3>{{'Overview'|trans}}</h3>
+                </td>
+            </tr>
+
+            <tr id="" class=" flex flex-col sm:flex-row justify-between content-center p-0">
+                <td class="flex-grow justify-center px-2 border-b-0 sm:border-b border-t-0 ">
+                    <div class="flex-1 relative{{ form.description.vars.valid ? '' : ' errors' }}">
+                        {{ form_widget(form.description) }}
+                        {{ form_errors(form.description) }}
+                    </div>
+                </td>
+            </tr>
+            {{ form_row(form.submit) }}
+        </tbody>
+    </table>
+    {{ form_end(form) }}
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+
+
+{% extends 'kookaburra.html.twig' %}
+
+{% set moduleName = 'Departments' %}
+{% set module = {
+    baseURL: 'departments',
+    crumbs: [
+        {uri: 'departments__list', name: 'Departments'},
+        {uri: 'departments__details', params: {department: department.id}, name: department.name}
+    ],
+    title: 'Edit Department'} %}
+{% set breadcrumbs = 'new' %}
+
+{% block content %}
+    <div id="formContent"></div>
+{% endblock content %}

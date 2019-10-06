@@ -14,3 +14,8 @@ services:
     Kookaburra\Department\Controller\:
         resource: '../../../src/Controller'
         tags: ['controller.service_arguments']
+
+    Kookaburra\Department\Form\EditType:
+        arguments:
+            $targetDir: '%kernel.public_dir%/%upload_path%'
+

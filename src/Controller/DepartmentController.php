@@ -21,15 +21,14 @@ use App\Entity\DepartmentResource;
 use App\Entity\DepartmentStaff;
 use App\Entity\Setting;
 use App\Entity\Unit;
-use App\Form\Modules\Departments\CourseOverviewType;
-use App\Form\Modules\Departments\EditType;
-use App\Form\Modules\Departments\ResourceTypeManager;
 use App\Manager\ExcelManager;
 use App\Provider\ProviderFactory;
 use App\Twig\Sidebar;
+use Kookaburra\Department\Form\CourseOverviewType;
+use Kookaburra\Department\Form\EditType;
+use Kookaburra\Department\Form\ResourceTypeManager;
 use Kookaburra\UserAdmin\Util\SecurityHelper;
 use Doctrine\DBAL\Driver\PDOException;
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -59,7 +58,7 @@ class DepartmentController extends AbstractController
         }
 
         ProviderFactory::create(CourseClass::class)->getMyClasses($this->getUser(), $sidebar);
-        return $this->render('modules/departments/list.html.twig',
+        return $this->render('@KookaburraDepartment/list.html.twig',
             [
                 'departments' => ProviderFactory::getRepository(Department::class)->findBy([], ['name' => 'ASC']),
             ]
@@ -98,7 +97,7 @@ class DepartmentController extends AbstractController
         if (count($courses) > 0)
             $sidebar->addExtra('courseList', ['courses' => $courses, 'department' => $department]);
 
-        return $this->render('modules/departments/details.html.twig',
+        return $this->render('@KookaburraDepartment/details.html.twig',
             [
                 'department' => $department,
                 'role' => $role,
@@ -148,7 +147,7 @@ class DepartmentController extends AbstractController
         if ($this->isGranted('ROLE_ROUTE', ['departments__course_class_details']))
             $sidebar->addExtra('courseClasses', ['course' => $course, 'department' => $department]);
 
-        return $this->render('modules/departments/course.html.twig',
+        return $this->render('@KookaburraDepartment/course.html.twig',
             [
                 'department' => $department,
                 'course' => $course,
@@ -197,7 +196,7 @@ class DepartmentController extends AbstractController
             $provider->saveEntity();
         }
 
-        return $this->render('modules/departments/course_edit.html.twig',
+        return $this->render('@KookaburraDepartment/course_edit.html.twig',
             [
                 'department' => $department,
                 'course' => $course,
@@ -208,10 +207,16 @@ class DepartmentController extends AbstractController
 
     /**
      * courseClass
+     * @param CourseClass $class
+     * @param Request $request
+     * @param Department|null $department
+     * @param Course|null $course
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @throws \Exception
      * @Route("/{department}/course/{course}/class/{class}/details/", name="course_class_details")
      * @IsGranted("ROLE_ROUTE")
      */
-    public function courseClass(CourseClass $class, Sidebar $sidebar, Request $request, ?Department $department = null, ?Course $course = null)
+    public function courseClass(CourseClass $class, Request $request, ?Department $department = null, ?Course $course = null)
     {
         if (!$class instanceof CourseClass) {
             return $this->render('components/error.html.twig', [
@@ -282,7 +287,7 @@ class DepartmentController extends AbstractController
         }
 
 
-        return $this->render('modules/departments/course_class.html.twig',
+        return $this->render('@KookaburraDepartment/course_class.html.twig',
             [
                 'department' => $department,
                 'course' => $course,
@@ -317,9 +322,8 @@ class DepartmentController extends AbstractController
 
             $form->submit($content);
 
-            $em = $this->getDoctrine()->getManager();
-
             if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
                 $em->persist($department);
                 $em->flush();
                 $em->refresh($department);
@@ -350,7 +354,7 @@ class DepartmentController extends AbstractController
 
         $manager->singlePanel($form->createView(), 'DepartmentEdit');
 
-        return $this->render('modules/departments/edit.html.twig', [
+        return $this->render('@KookaburraDepartment/edit.html.twig', [
             'department' => $department,
         ]);
     }

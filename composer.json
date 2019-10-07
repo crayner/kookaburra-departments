@@ -1,5 +1,5 @@
 {
-    "name": "kookaburra/department",
+    "name": "kookaburra/departments",
     "type": "symfony-bundle",
     "description": "Kookaburra Department Bundle",
     "keywords": [

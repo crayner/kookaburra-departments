@@ -10,7 +10,7 @@
  * Time: 11:23
  */
 
-namespace Kookaburra\Department\Form;
+namespace Kookaburra\Departments\Form;
 
 use App\Form\EventSubscriber\FileURLListener;
 use App\Form\EventSubscriber\ReactFileListener;

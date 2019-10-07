@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kookaburra\\Department\\": "/src/"
+            "Kookaburra\\Departments\\": "/src/"
         },
         "exclude-from-classmap": [
             "/tests/"
@@ -33,7 +33,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Kookaburra\\Department\\Tests\\": "tests/"
+            "Kookaburra\\Departments\\Tests\\": "tests/"
         }
     }
 }

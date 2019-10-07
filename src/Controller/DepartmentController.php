@@ -10,7 +10,7 @@
  * Time: 14:08
  */
 
-namespace Kookaburra\Department\Controller;
+namespace Kookaburra\Departments\Controller;
 
 use App\Container\ContainerManager;
 use App\Entity\Course;
@@ -24,9 +24,9 @@ use App\Entity\Unit;
 use App\Manager\ExcelManager;
 use App\Provider\ProviderFactory;
 use App\Twig\Sidebar;
-use Kookaburra\Department\Form\CourseOverviewType;
-use Kookaburra\Department\Form\EditType;
-use Kookaburra\Department\Form\ResourceTypeManager;
+use Kookaburra\Departments\Form\CourseOverviewType;
+use Kookaburra\Departments\Form\EditType;
+use Kookaburra\Departments\Form\ResourceTypeManager;
 use Kookaburra\UserAdmin\Util\SecurityHelper;
 use Doctrine\DBAL\Driver\PDOException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -39,7 +39,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Class DepartmentController
- * @package Kookaburra\Department\Controller
+ * @package Kookaburra\Departments\Controller
  * @Route("/departments", name="departments__")
  */
 class DepartmentController extends AbstractController

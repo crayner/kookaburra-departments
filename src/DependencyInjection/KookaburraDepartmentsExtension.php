@@ -9,7 +9,7 @@
  * Date: 5/10/2019
  * Time: 18:14
  */
-namespace Kookaburra\Department\DependencyInjection;
+namespace Kookaburra\Departments\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -17,10 +17,10 @@ use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
- * Class KookaburraDepartmentExtension
- * @package Kookaburra\Department\DependencyInjection
+ * Class KookaburraDepartmentsExtension
+ * @package Kookaburra\Departments\DependencyInjection
  */
-class KookaburraDepartmentExtension extends Extension
+class KookaburraDepartmentsExtension extends Extension
 {
     /**
      * load

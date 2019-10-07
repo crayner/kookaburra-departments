@@ -10,7 +10,7 @@
  * Time: 13:48
  */
 
-namespace Kookaburra\Department\Form;
+namespace Kookaburra\Departments\Form;
 
 use App\Entity\Course;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;

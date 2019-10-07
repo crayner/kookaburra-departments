@@ -10,7 +10,7 @@
  * Time: 18:09
  */
 
-namespace Kookaburra\Department;
+namespace Kookaburra\Departments;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -19,7 +19,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * Class KookaburraDepartmentBundle
  * @package Kookaburra\Department
  */
-class KookaburraDepartmentBundle extends Bundle
+class KookaburraDepartmentsBundle extends Bundle
 {
     /**
      * build

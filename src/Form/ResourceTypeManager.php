@@ -10,7 +10,7 @@
  * Time: 13:14
  */
 
-namespace Kookaburra\Department\Form;
+namespace Kookaburra\Departments\Form;
 
 use App\Form\CollectionTemplate;
 

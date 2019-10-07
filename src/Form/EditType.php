@@ -10,7 +10,7 @@
  * Time: 09:21
  */
 
-namespace Kookaburra\Department\Form;
+namespace Kookaburra\Departments\Form;
 
 use App\Entity\Department;
 use App\Form\EventSubscriber\FileOrLinkURLSubscriber;

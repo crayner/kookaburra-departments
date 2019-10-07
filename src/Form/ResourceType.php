@@ -10,7 +10,7 @@
  * Time: 10:37
  */
 
-namespace Kookaburra\Department\Form;
+namespace Kookaburra\Departments\Form;
 
 use App\Entity\Department;
 use App\Entity\DepartmentResource;

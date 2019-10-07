@@ -1,7 +1,7 @@
 {
     "name": "kookaburra/departments",
     "type": "symfony-bundle",
-    "description": "Kookaburra Department Bundle",
+    "description": "Kookaburra Departments Bundle",
     "keywords": [
         "doctrine"
     ],

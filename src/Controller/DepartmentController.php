@@ -58,7 +58,7 @@ class DepartmentController extends AbstractController
         }
 
         ProviderFactory::create(CourseClass::class)->getMyClasses($this->getUser(), $sidebar);
-        return $this->render('@KookaburraDepartment/list.html.twig',
+        return $this->render('@KookaburraDepartments/list.html.twig',
             [
                 'departments' => ProviderFactory::getRepository(Department::class)->findBy([], ['name' => 'ASC']),
             ]
@@ -97,7 +97,7 @@ class DepartmentController extends AbstractController
         if (count($courses) > 0)
             $sidebar->addExtra('courseList', ['courses' => $courses, 'department' => $department]);
 
-        return $this->render('@KookaburraDepartment/details.html.twig',
+        return $this->render('@KookaburraDepartments/details.html.twig',
             [
                 'department' => $department,
                 'role' => $role,
@@ -147,7 +147,7 @@ class DepartmentController extends AbstractController
         if ($this->isGranted('ROLE_ROUTE', ['departments__course_class_details']))
             $sidebar->addExtra('courseClasses', ['course' => $course, 'department' => $department]);
 
-        return $this->render('@KookaburraDepartment/course.html.twig',
+        return $this->render('@KookaburraDepartments/course.html.twig',
             [
                 'department' => $department,
                 'course' => $course,
@@ -196,7 +196,7 @@ class DepartmentController extends AbstractController
             $provider->saveEntity();
         }
 
-        return $this->render('@KookaburraDepartment/course_edit.html.twig',
+        return $this->render('@KookaburraDepartments/course_edit.html.twig',
             [
                 'department' => $department,
                 'course' => $course,
@@ -287,7 +287,7 @@ class DepartmentController extends AbstractController
         }
 
 
-        return $this->render('@KookaburraDepartment/course_class.html.twig',
+        return $this->render('@KookaburraDepartments/course_class.html.twig',
             [
                 'department' => $department,
                 'course' => $course,
@@ -354,7 +354,7 @@ class DepartmentController extends AbstractController
 
         $manager->singlePanel($form->createView(), 'DepartmentEdit');
 
-        return $this->render('@KookaburraDepartment/edit.html.twig', [
+        return $this->render('@KookaburraDepartments/edit.html.twig', [
             'department' => $department,
         ]);
     }
@@ -363,7 +363,7 @@ class DepartmentController extends AbstractController
      * deleteResource
      * @param DepartmentResource $departmentResource
      * @Route("/{department}/resource/{resource}/delete/", name="resource_delete")
-     * @Security("is_granted('ROLE_ROUTE', ['departments__edit']")
+     * @Security("is_granted('ROLE_ROUTE', ['departments__edit'])")
      * @return JsonResponse
      */
     public function deleteResource(DepartmentResource $resource, Department $department, TranslatorInterface $translator, ContainerManager $manager, ResourceTypeManager $resourceTypeManager)

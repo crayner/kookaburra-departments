@@ -47,7 +47,8 @@ class DepartmentController extends AbstractController
     /**
      * list
      * @Route("/list/", name="list")
-     * @IsGranted("ROLE_ROUTE")
+     * @Route("/")
+     * @Security("is_granted('ROLE_ROUTE', ['departments__list'])")
      */
     public function list(Sidebar $sidebar)
     {

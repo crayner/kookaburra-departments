@@ -23,7 +23,7 @@ use App\Entity\Setting;
 use App\Entity\Unit;
 use App\Manager\ExcelManager;
 use App\Provider\ProviderFactory;
-use App\Twig\Sidebar;
+use App\Twig\SidebarContent;
 use Kookaburra\Departments\Form\CourseOverviewType;
 use Kookaburra\Departments\Form\EditType;
 use Kookaburra\Departments\Form\ResourceTypeManager;
@@ -46,11 +46,12 @@ class DepartmentController extends AbstractController
 {
     /**
      * list
+     * @param SidebarContent $sidebar
      * @Route("/list/", name="list")
      * @Route("/")
      * @Security("is_granted('ROLE_ROUTE', ['departments__list'])")
      */
-    public function list(Sidebar $sidebar)
+    public function list(SidebarContent $sidebar)
     {
         if (!$this->isGranted('ROLE_ROUTE') && !ProviderFactory::create(Setting::class)->getSettingByScopeAsBoolean('Departments', 'makeDepartmentsPublic')) {
             return $this->render('components/error.html.twig', [
@@ -69,12 +70,13 @@ class DepartmentController extends AbstractController
     /**
      * details
      * @param Department $department
+     * @param SidebarContent $sidebar
      * @return \Symfony\Component\HttpFoundation\Response
      * @throws \Exception
      * @Route("/{department}/details/", name="details")
      * @IsGranted("ROLE_ROUTE")
      */
-    public function details(Department $department, Sidebar $sidebar)
+    public function details(Department $department, SidebarContent $sidebar)
     {
         if (!$this->isGranted('ROLE_ROUTE') && !ProviderFactory::create(Setting::class)->getSettingByScopeAsBoolean('Departments', 'makeDepartmentsPublic')) {
             return $this->render('components/error.html.twig', [
@@ -111,12 +113,12 @@ class DepartmentController extends AbstractController
      * course
      * @param Department $department
      * @param Course $course
-     * @param Sidebar $sidebar
+     * @param SidebarContent $sidebar
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/{department}/course/{course}/details/", name="course_details")
      * @IsGranted("ROLE_ROUTE")
      */
-    public function course(Department $department, Course $course, Sidebar $sidebar, Request $request)
+    public function course(Department $department, Course $course, SidebarContent $sidebar, Request $request)
     {
         if (!$this->isGranted('ROLE_ROUTE') && !ProviderFactory::create(Setting::class)->getSettingByScopeAsBoolean('Departments', 'makeDepartmentsPublic')) {
             return $this->render('components/error.html.twig', [
@@ -415,10 +417,15 @@ class DepartmentController extends AbstractController
 
     /**
      * courseClassExport
+     * @param CourseClass $class
+     * @param SidebarContent $sidebar
+     * @param Request $request
+     * @param Department|null $department
+     * @param Course|null $course
      * @Route("/{department}/course/{course}/class/{class}/export/", name="course_class_export")
      * @Security("is_granted('ROLE_HIGHEST', ['/modules/Students/student_view_details.php', 'View Student Profile_full', '!==']) or is_granted('ROLE_ROUTE', ['departments__course_class_details'])")
      */
-    public function courseClassExport(CourseClass $class, Sidebar $sidebar, Request $request, ?Department $department = null, ?Course $course = null)
+    public function courseClassExport(CourseClass $class, SidebarContent $sidebar, Request $request, ?Department $department = null, ?Course $course = null)
     {
         if ($course === null) {
             $course = $class->getCourse();

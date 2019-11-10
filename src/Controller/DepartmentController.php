@@ -219,7 +219,7 @@ class DepartmentController extends AbstractController
      * @Route("/{department}/course/{course}/class/{class}/details/", name="course_class_details")
      * @IsGranted("ROLE_ROUTE")
      */
-    public function courseClass(CourseClass $class, Request $request, ?Department $department = null, ?Course $course = null)
+    public function courseClass(CourseClass $class, Request $request, SidebarContent $sidebar, ?Department $department = null, ?Course $course = null)
     {
         if (!$class instanceof CourseClass) {
             return $this->render('components/error.html.twig', [

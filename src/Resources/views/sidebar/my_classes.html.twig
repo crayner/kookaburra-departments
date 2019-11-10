@@ -1,0 +1,12 @@
+{% trans_default_domain classes.transDomain|default('messages') %}
+
+{% if classes.classes|length > 0 %}
+<div class="column-no-break">
+    <h3 class="sidebar">{{ 'My Classes'|trans }}</h3>
+    <ul>
+        {% for class in classes.classes %}
+            <li><a href="{{ path('departments__course_class_details', {department: 0, course: class.course.id, class: class.id}) }}">{{ class.courseClassName(true)}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

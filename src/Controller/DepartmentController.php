@@ -418,14 +418,13 @@ class DepartmentController extends AbstractController
     /**
      * courseClassExport
      * @param CourseClass $class
-     * @param SidebarContent $sidebar
      * @param Request $request
      * @param Department|null $department
      * @param Course|null $course
      * @Route("/{department}/course/{course}/class/{class}/export/", name="course_class_export")
      * @Security("is_granted('ROLE_HIGHEST', ['/modules/Students/student_view_details.php', 'View Student Profile_full', '!==']) or is_granted('ROLE_ROUTE', ['departments__course_class_details'])")
      */
-    public function courseClassExport(CourseClass $class, SidebarContent $sidebar, Request $request, ?Department $department = null, ?Course $course = null)
+    public function courseClassExport(CourseClass $class, Request $request, ?Department $department = null, ?Course $course = null)
     {
         if ($course === null) {
             $course = $class->getCourse();

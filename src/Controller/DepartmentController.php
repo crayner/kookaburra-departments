@@ -27,6 +27,9 @@ use App\Twig\SidebarContent;
 use Kookaburra\Departments\Form\CourseOverviewType;
 use Kookaburra\Departments\Form\EditType;
 use Kookaburra\Departments\Form\ResourceTypeManager;
+use Kookaburra\Departments\Twig\ClassList;
+use Kookaburra\Departments\Twig\CourseList;
+use Kookaburra\Departments\Twig\SubjectList;
 use Kookaburra\UserAdmin\Util\SecurityHelper;
 use Doctrine\DBAL\Driver\PDOException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -92,13 +95,17 @@ class DepartmentController extends AbstractController
 
         $role = ProviderFactory::create(DepartmentStaff::class)->getRole($department, $this->getUser());
 
-        if (count(explode(',', $department->getSubjectListing())) > 0)
-            $sidebar->addExtra('subjectList', explode(',', $department->getSubjectListing()));
+        if (count(explode(',', $department->getSubjectListing())) > 0) {
+            $subjectList = new SubjectList();
+            $sidebar->addContent($subjectList->setSubjects($department->getSubjectListing()));
+       }
 
         $courses = ProviderFactory::create(Course::class)->getByDepartment($department);
 
-        if (count($courses) > 0)
-            $sidebar->addExtra('courseList', ['courses' => $courses, 'department' => $department]);
+        if (count($courses) > 0) {
+            $courseList = new CourseList();
+            $sidebar->addContent($courseList->setCourses($courses)->setDepartment($department));
+        }
 
         return $this->render('@KookaburraDepartments/details.html.twig',
             [
@@ -147,8 +154,10 @@ class DepartmentController extends AbstractController
 
         $units = ProviderFactory::getRepository(Unit::class)->findBy(['active' => 'Y', 'course' => $course], ['ordering' => 'ASC', 'name' => 'ASC']);
 
-        if ($this->isGranted('ROLE_ROUTE', ['departments__course_class_details']))
-            $sidebar->addExtra('courseClasses', ['course' => $course, 'department' => $department]);
+        if ($this->isGranted('ROLE_ROUTE', ['departments__course_class_details'])) {
+            $courseClass = new ClassList();
+            $sidebar->addContent( $courseClass->setCourse($course)->setDepartment($department));
+        }
 
         return $this->render('@KookaburraDepartments/course.html.twig',
             [

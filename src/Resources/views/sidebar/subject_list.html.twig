@@ -1,0 +1,11 @@
+{% trans_default_domain classes.transDomain|default('Departments') %}
+
+<div class="column-no-break">
+    <h3 class="sidebar">{{ 'Subject List'|trans }}</h3>
+    <ul>
+        {% for subject in subjects.subjects %}
+            <li>{{ subject }}</li>
+        {% endfor %}
+    </ul>
+</div>
+

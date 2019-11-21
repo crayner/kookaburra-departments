@@ -10,7 +10,7 @@
 {% set breadcrumbs = 'new' %}
 
 {% block content %}
-    {% if course.description is not same as('') or role in ['Coordinator','Assistant Coordinator','Teacher (Curriculum)'] %}
+    {% if role in ['Coordinator','Assistant Coordinator','Teacher (Curriculum)'] %}
         <h2>{{ 'Overview'|trans }}
         {% if role in ['Coordinator','Assistant Coordinator','Teacher (Curriculum)'] %}
             <a href='{{ path('departments__course_edit', {course: course.id, department: department.id}) }}' title='{{ 'Edit'|trans }}'><span class="text-gray-600 far fa-edit" style="float:right;"></span></a>

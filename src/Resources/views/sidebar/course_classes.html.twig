@@ -1,0 +1,10 @@
+{% trans_default_domain 'Departments' %}
+
+<div class="column-no-break">
+    <h4>{{ 'Class List'|trans }}</h4>
+    <ul style="list-style: none; margin-left: 0">
+        {% for class in content.course.courseClasses %}
+            <li><a href='{{ path('departments__course_class_details', {department: content.department.id, course: content.course.id, class: class.id }) }}'>{{ class.courseClassName(true) }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

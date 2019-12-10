@@ -2,7 +2,7 @@
     {{ 'Participants'|trans }}
     <a href="{{ path('departments__course_class_export', {class: class.id, course: course.id, department: department.id}) }}" title="{{ 'Export to Excel'|trans }}" style="float: right"><span class="fas fa-file-download fa-fw text-blue-600"></span></a>
 </h3>
-{% dump %}
+
 <div class="flex flex-wrap rounded-sm bg-blue-100 border">
     <div class="w-full">
         <div class="mt-2 text-right text-xxs text-gray-700 italic"><div class="inline flex-1 relative"><input type="checkbox" name="confidential" id="confidential" value="on" checked="checked" onchange="toggleConfidential()">&nbsp;<label for="confidential">{{ 'Show Confidential Data'|trans }}</label>&nbsp;&nbsp;</div></div>

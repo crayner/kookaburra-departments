@@ -247,8 +247,8 @@ class DepartmentController extends AbstractController
         $role = ProviderFactory::create(DepartmentStaff::class)->getRole($department, $this->getUser());
 
         $extra = '';
-        if (in_array($role, ['Coordinator', 'Assistant Coordinator', 'Teacher (Curriculum)', 'Teacher']) && $course->getSchoolYear()->getId() !== $request->getSession()->get('schoolYear')->getId()) {
-            $extra = ' ' . $course->getSchoolYear()->getName();
+        if (in_array($role, ['Coordinator', 'Assistant Coordinator', 'Teacher (Curriculum)', 'Teacher']) && $course->getAcademicYear()->getId() !== $request->getSession()->get('academicYear')->getId()) {
+            $extra = ' ' . $course->getAcademicYear()->getName();
         }
 
         $classActions = [];

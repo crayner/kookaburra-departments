@@ -16,7 +16,6 @@
 namespace Kookaburra\Departments\Form;
 
 use App\Form\EventSubscriber\FileURLListener;
-use App\Form\EventSubscriber\ReactFileListener;
 use App\Form\Transform\FileURLToStringTransformer;
 use App\Validator\URLOrFile;
 use Symfony\Component\Form\AbstractType;

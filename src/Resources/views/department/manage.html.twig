@@ -1,0 +1,17 @@
+{% trans_default_domain 'departments' %}
+
+{% extends 'kookaburra.html.twig' %}
+
+{% set moduleName = 'Departments' %}
+{% set module = {'baseURL': 'departments', 'crumbs': [
+    {uri: 'departments__list', name: 'Departments'}
+], title:'Manage Departments', domain: 'departments'}
+%}
+{% set breadcrumbs = 'new' %}
+
+{% block content %}
+    <div id="formContent"></div>
+    <h3><button class="close-button gray" title="{{ 'Add'|trans({}, 'messages') }}" type="button" onclick="window.open('{{ path('departments__add') }}','_self')"><span class="fas fa-plus-circle fa-fw"/></button>
+        {{ 'Departments'|trans }}</h3>
+    <div id="paginationContent"></div>
+{% endblock content %}

@@ -19,14 +19,14 @@ use App\Container\ContainerManager;
 use App\Entity\Course;
 use App\Entity\CourseClass;
 use App\Entity\CourseClassPerson;
-use App\Entity\Department;
-use App\Entity\DepartmentResource;
-use App\Entity\DepartmentStaff;
 use App\Entity\Setting;
 use App\Entity\Unit;
 use App\Manager\ExcelManager;
 use App\Provider\ProviderFactory;
 use App\Twig\SidebarContent;
+use Kookaburra\Departments\Entity\Department;
+use Kookaburra\Departments\Entity\DepartmentResource;
+use Kookaburra\Departments\Entity\DepartmentStaff;
 use Kookaburra\Departments\Form\CourseOverviewType;
 use Kookaburra\Departments\Form\EditType;
 use Kookaburra\Departments\Form\ResourceTypeManager;
@@ -46,7 +46,6 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 /**
  * Class DepartmentController
  * @package Kookaburra\Departments\Controller
- * @Route("/departments", name="departments__")
  */
 class DepartmentController extends AbstractController
 {

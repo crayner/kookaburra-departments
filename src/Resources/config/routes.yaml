@@ -2,3 +2,7 @@ controllers:
     resource: '@KookaburraDepartmentsBundle/Controller/'
     type: annotation
     schemes: [ 'https' ]
+    # this is added to the beginning of all imported route URLs
+    prefix: '/departments'
+    # this is added to the beginning of all imported route names
+    name_prefix: 'departments__'

@@ -65,10 +65,10 @@ class Department implements EntityInterface
     private $nameShort;
 
     /**
-     * @var string|null
-     * @ORM\Column(name="subjectListing")
+     * @var array
+     * @ORM\Column(type="simple_array",name="subjectListing")
      */
-    private $subjectListing;
+    private $subjectListing = [];
 
     /**
      * @var string|null
@@ -175,19 +175,25 @@ class Department implements EntityInterface
     }
 
     /**
-     * @return string|null
+     * @return array
      */
-    public function getSubjectListing(): ?string
+    public function getSubjectListing(): array
     {
+        $this->subjectListing =  $this->subjectListing ?: [];
+        foreach($this->subjectListing as $q=>$w)
+            $this->subjectListing[$q] = trim($w);
         return $this->subjectListing;
     }
 
     /**
-     * @param string|null $subjectListing
+     * SubjectListing.
+     *
+     * @param array $subjectListing
      * @return Department
      */
-    public function setSubjectListing(?string $subjectListing): Department
+    public function setSubjectListing(array $subjectListing): Department
     {
+        dump($subjectListing);
         $this->subjectListing = $subjectListing;
         return $this;
     }

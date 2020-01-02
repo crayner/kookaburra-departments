@@ -15,12 +15,16 @@
 
 namespace Kookaburra\Departments\Controller;
 
+use App\Container\Container;
 use App\Container\ContainerManager;
+use App\Container\Panel;
 use App\Entity\Setting;
 use App\Provider\ProviderFactory;
+use App\Util\ErrorMessageHelper;
 use App\Util\TranslationsHelper;
 use Kookaburra\Departments\Entity\Department;
 use Kookaburra\Departments\Form\DepartmentSettingType;
+use Kookaburra\Departments\Form\DepartmentType;
 use Kookaburra\Departments\Pagination\DepartmentPagination;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -76,24 +80,27 @@ class ManageController extends AbstractController
      * @param ContainerManager $manager
      * @param Request $request
      * @param Department|null $department
-     * @Route("/{department}/edit/", name="edit")
-     * @Route("/add/", name="add")
+     * @Route("/{department}/edit/{tabName}", name="edit")
+     * @Route("/add/{tabName}", name="add")
      * @IsGranted("ROLE_ROUTE")
      */
-    public function edit(ContainerManager $manager, Request $request, ?Department $department = null)
+    public function edit(ContainerManager $manager, Request $request, ?Department $department = null, ?string $tabName = 'General')
     {
         if (!$department instanceof Department) {
             $department = new Department();
-            $action = $this->generateUrl('departments__add');
+            $action = $this->generateUrl('departments__add', ['tabName' => $tabName]);
         } else {
-            $action = $this->generateUrl('departments__edit', ['department' => $department->getId()]);
+            $action = $this->generateUrl('departments__edit', ['department' => $department->getId(), 'tabName' => $tabName]);
         }
 
         $form = $this->createForm(DepartmentType::class, $department, ['action' => $action]);
 
+        $container = new Container();
+        $container->setTarget('formContent')->setSelectedPanel($tabName);
+        TranslationsHelper::setDomain('Departments');
+
         if ($request->getContentType() === 'json') {
             $content = json_decode($request->getContent(), true);
-            dump($content);
             $form->submit($content);
             $data = [];
             $data['status'] = 'success';
@@ -101,8 +108,16 @@ class ManageController extends AbstractController
                 $id = $department->getId();
                 $provider = ProviderFactory::create(Department::class);
                 $data = $provider->persistFlush($department, $data);
-                if ($data['status'] === 'success')
-                    $form = $this->createForm(DepartmentType::class, $department, ['action' => $this->generateUrl('departments__edit', ['department' => $department->getId()])]);
+                if ($data['status'] === 'success') {
+                    $form = $this->createForm(DepartmentType::class, $department,
+                        ['action' => $this->generateUrl('departments__edit', ['department' => $department->getId(), 'tabName' => $tabName])]
+                    );
+                    if ($id !== $department->getId()) {
+                        ErrorMessageHelper::convertToFlash($data);
+                        $data['status'] = 'redirect';
+                        $data['redirect'] = $this->generateUrl('departments__edit', ['department' => $department->getId(), 'tabName' => $tabName]);
+                    }
+                }
             } else {
                 $data['errors'][] = ['class' => 'error', 'message' => TranslationsHelper::translate('return.error.1', [], 'messages')];
                 $data['status'] = 'error';
@@ -113,7 +128,14 @@ class ManageController extends AbstractController
 
             return new JsonResponse($data, 200);
         }
-        $manager->singlePanel($form->createView());
+
+        $panel = new Panel('General', 'Departments');
+        $container->addForm('single', $form->createView())->addPanel($panel);
+
+        $panel = new Panel('Staff', 'Departments');
+        $container->addPanel($panel);
+
+        $manager->addContainer($container)->buildContainers();
 
         return $this->render('@KookaburraDepartments/department/edit.html.twig',
             [

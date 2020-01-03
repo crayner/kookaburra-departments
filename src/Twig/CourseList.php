@@ -15,7 +15,7 @@
 
 namespace Kookaburra\Departments\Twig;
 
-use App\Entity\Department;
+use Kookaburra\Departments\Entity\Department;
 use App\Twig\SidebarContentInterface;
 use App\Twig\SidebarContentTrait;
 use Twig\Error\LoaderError;

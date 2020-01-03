@@ -16,6 +16,8 @@
 namespace Kookaburra\Departments\Provider;
 
 use App\Provider\EntityProviderInterface;
+use App\Util\ErrorMessageHelper;
+use App\Util\TranslationsHelper;
 use Kookaburra\Departments\Entity\Department;
 use Kookaburra\Departments\Entity\DepartmentStaff;
 use Kookaburra\UserAdmin\Entity\Person;
@@ -52,4 +54,32 @@ class DepartmentStaffProvider implements EntityProviderInterface
         return $result ? $result->getRole() : false;
     }
 
+    /**
+     * writeDepartmentStaff
+     * @param Department $department
+     * @param array $personList
+     * @param string $role
+     * @param array $data
+     * @return array
+     */
+    public function writeDepartmentStaff(Department $department, array $personList, string $role, array $status): array
+    {
+        if (empty($personList) || empty($role))
+        {
+           return ErrorMessageHelper::getInvalidInputsMessage($status);
+        }
+
+        foreach($personList as $personId)
+        {
+            $person = $this->getRepository(Person::class)->find($personId);
+            if ($person instanceof Person)
+            {
+                $ds = $this->getRepository()->findOneBy(['department' => $department, 'person' => $person]) ?: new DepartmentStaff();
+                $ds->setPerson($person)->setDepartment($department)->setRole($role);
+                $status = $this->persistFlush($ds, $status, false);
+            }
+        }
+        $this->flush();
+        return $status;
+    }
 }

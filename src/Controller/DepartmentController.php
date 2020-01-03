@@ -97,7 +97,7 @@ class DepartmentController extends AbstractController
 
         $role = ProviderFactory::create(DepartmentStaff::class)->getRole($department, $this->getUser());
 
-        if (count(explode(',', $department->getSubjectListing())) > 0) {
+        if (count($department->getSubjectListing()) > 0) {
             $subjectList = new SubjectList();
             $sidebar->addContent($subjectList->setSubjects($department->getSubjectListing()));
        }

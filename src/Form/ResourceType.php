@@ -15,8 +15,8 @@
 
 namespace Kookaburra\Departments\Form;
 
-use App\Entity\Department;
-use App\Entity\DepartmentResource;
+use Kookaburra\Departments\Entity\Department;
+use Kookaburra\Departments\Entity\DepartmentResource;
 use App\Form\Type\HiddenEntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;

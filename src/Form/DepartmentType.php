@@ -23,8 +23,8 @@ use App\Form\Type\SimpleArrayType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Kookaburra\Departments\Entity\Department;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -102,13 +102,25 @@ class DepartmentType extends AbstractType
                     'panel' => 'General',
                 ]
             )
-            ->add('submit1', SubmitType::class,
+            ->add('submit', SubmitType::class,
                 [
                     'label' => 'Submit',
                     'panel' => 'General',
                 ]
             )
-            ->add('submit2', SubmitType::class,
+            ->add('staffTitle', HeaderType::class,
+                [
+                    'label' => 'New Staff',
+                    'panel' => 'Staff',
+                ]
+            )
+            ->add('formName', HiddenType::class,
+                [
+                    'data' => 'General Form',
+                    'mapped' => false,
+                ]
+            )
+                ->add('submit2', SubmitType::class,
                 [
                     'label' => 'Submit',
                     'panel' => 'Staff',

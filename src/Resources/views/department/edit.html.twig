@@ -1,4 +1,4 @@
-
+{% trans_default_domain 'Departments' %}
 
 {% extends 'kookaburra.html.twig' %}
 
@@ -6,10 +6,9 @@
 {% set module = {
     baseURL: 'departments',
     crumbs: [
-        {uri: 'departments__list', name: 'Departments'},
-        {uri: 'departments__details', params: {department: department.id}, name: department.name}
+        {uri: 'departments__manage', name: 'Departments'},
     ],
-    title: 'Edit Department'} %}
+    title: department.id > 0 ? 'Edit Department' : 'Add Department', domain: 'Departments'} %}
 {% set breadcrumbs = 'new' %}
 
 {% block content %}

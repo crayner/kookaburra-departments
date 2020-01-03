@@ -103,11 +103,11 @@ class Department implements EntityInterface
     }
 
     /**
-     * @return int|null
+     * @return int
      */
-    public function getId(): ?int
+    public function getId(): int
     {
-        return $this->id;
+        return intval($this->id);
     }
 
     /**
@@ -139,9 +139,9 @@ class Department implements EntityInterface
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -157,9 +157,9 @@ class Department implements EntityInterface
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getNameShort(): string
+    public function getNameShort(): ?string
     {
         return $this->nameShort;
     }

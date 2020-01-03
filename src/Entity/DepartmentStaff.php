@@ -12,6 +12,7 @@
  */
 namespace Kookaburra\Departments\Entity;
 
+use App\Manager\EntityInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Kookaburra\UserAdmin\Entity\Person;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -26,7 +27,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     uniqueConstraints={@ORM\UniqueConstraint(name="departmentPerson",columns={"department","gibbonPersonID"})})
  * @UniqueEntity({"department","person"})
  */
-class DepartmentStaff
+class DepartmentStaff implements EntityInterface
 {
     /**
      * @var integer|null
@@ -152,5 +153,19 @@ class DepartmentStaff
     public function __toString(): string
     {
         return $this->getDepartment()->__toString() . ': ' . $this->getPerson()->formatName();
+    }
+
+    /**
+     * toArray
+     * @param string|null $name
+     * @return array
+     */
+    public function toArray(?string $name = null): array
+    {
+        return [
+            'name' => $this->getPerson()->formatName(['style' => 'long', 'reverse' => true, 'preferred' => false]),
+            'role' => $this->getRole(),
+            'canDelete' => true,
+        ];
     }
 }

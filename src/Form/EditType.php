@@ -15,7 +15,7 @@
 
 namespace Kookaburra\Departments\Form;
 
-use App\Entity\Department;
+use Kookaburra\Departments\Entity\Department;
 use App\Form\EventSubscriber\FileOrLinkURLSubscriber;
 use App\Form\Type\HeaderType;
 use App\Form\Type\ReactCollectionType;

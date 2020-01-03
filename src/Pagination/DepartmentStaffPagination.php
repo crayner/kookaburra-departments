@@ -9,8 +9,8 @@
  * file that was distributed with this source code.
  *
  * User: craig
- * Date: 1/01/2020
- * Time: 15:31
+ * Date: 2/01/2020
+ * Time: 14:38
  */
 
 namespace Kookaburra\Departments\Pagination;
@@ -23,10 +23,10 @@ use App\Manager\ReactPaginationManager;
 use App\Util\TranslationsHelper;
 
 /**
- * Class DepartmentPagination
+ * Class DepartmentStaffPagination
  * @package Kookaburra\Departments\Pagination
  */
-class DepartmentPagination extends ReactPaginationManager
+class DepartmentStaffPagination extends ReactPaginationManager
 {
     /**
      * execute
@@ -46,46 +46,24 @@ class DepartmentPagination extends ReactPaginationManager
         $row->addColumn($column);
 
         $column = new PaginationColumn();
-        $column->setLabel('Type')
-            ->setContentKey('type')
+        $column->setLabel('Role')
+            ->setContentKey('role')
             ->setSort(true)
             ->setClass('column relative pr-4 cursor-pointer widthAuto')
         ;
         $row->addColumn($column);
-
-        $column = new PaginationColumn();
-        $column->setLabel('Abbreviation')
-            ->setContentKey('abbr')
-            ->setClass('column relative pr-4 cursor-pointer widthAuto');
-        $row->addColumn($column);
-
-        $column = new PaginationColumn();
-        $column->setLabel('Staff')
-            ->setContentKey('staff')
-            ->setClass('column relative pr-4 cursor-pointer widthAuto');
-        $row->addColumn($column);
-
-        $action = new PaginationAction();
-        $action->setTitle('Edit')
-            ->setAClass('')
-            ->setColumnClass('column p-2 sm:p-3')
-            ->setSpanClass('fas fa-edit fa-fw fa-1-5x text-gray-700')
-            ->setRoute('departments__edit')
-            ->setRouteParams(['department' => 'id']);
-        $row->addAction($action);
 
         $action = new PaginationAction();
         $action->setTitle('Delete')
             ->setAClass('')
             ->setColumnClass('column p-2 sm:p-3')
             ->setSpanClass('far fa-trash-alt fa-fw fa-1-5x text-gray-700')
-            ->setRoute('departments__delete')
-            ->setDisplayWhen('canDelete')
-            ->setOnClick('areYouSure')
-            ->setRouteParams(['department' => 'id']);
+            ->setRoute('departments__delete_staff')
+            ->setRouteParams(['staff' => 'id']);
         $row->addAction($action);
 
         $this->setRow($row);
         return $this;
     }
+
 }

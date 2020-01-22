@@ -1,2 +1,58 @@
 version: 0.0.00
 name: Departments
+module:
+    name: Departments
+    description: 'View details within a department'
+    entryURL: list
+    type: Core
+    active: 'Y'
+    category: Learn
+    version: 0.0.00
+    author: 'Craig Rayner'
+    url: 'http://www.craigrayner.com'
+    actions:
+        'View Departments':
+            name: 'View Departments'
+            precedence: 0
+            category: Departments
+            description: 'Allows users to view all department details.'
+            URLList: 'list,details,course_details,course_class_details,course_details,edit,course_edit,resource_delete'
+            entryURL: list
+            entrySidebar: 'Y'
+            menuShow: 'Y'
+            defaultPermissionAdmin: 'Y'
+            defaultPermissionTeacher: 'Y'
+            defaultPermissionStudent: 'Y'
+            defaultPermissionParent: 'Y'
+            defaultPermissionSupport: 'Y'
+            categoryPermissionStaff: 'Y'
+            categoryPermissionStudent: 'Y'
+            categoryPermissionParent: 'Y'
+            categoryPermissionOther: 'Y'
+            permissions:
+                - Administrator
+                - Parent
+                - Student
+                - 'Support Staff'
+                - Teacher
+                - Librarian
+        'Manage Departments':
+            name: 'Manage Departments'
+            precedence: 1
+            category: Departments
+            description: 'Allows admins to create learning areas and administrative groups.'
+            URLList: 'manage,add,edit,delete'
+            entryURL: manage
+            entrySidebar: 'Y'
+            menuShow: 'Y'
+            defaultPermissionAdmin: 'Y'
+            defaultPermissionTeacher: 'N'
+            defaultPermissionStudent: 'N'
+            defaultPermissionParent: 'N'
+            defaultPermissionSupport: 'N'
+            categoryPermissionStaff: 'Y'
+            categoryPermissionStudent: 'N'
+            categoryPermissionParent: 'N'
+            categoryPermissionOther: 'N'
+            permissions:
+                - Administrator

@@ -10,7 +10,7 @@ CREATE TABLE `__prefix__Department` (
   UNIQUE KEY `name` (`name`),
   UNIQUE KEY `nameShort` (`nameShort`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT = 1;
-CREATE TABLE __prefix__DepartmentResource (
+CREATE TABLE `__prefix__DepartmentResource` (
     id INT(8) UNSIGNED ZEROFILL AUTO_INCREMENT,
     type VARCHAR(16) NOT NULL,
     name VARCHAR(100) NOT NULL,

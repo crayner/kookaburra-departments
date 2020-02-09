@@ -105,7 +105,6 @@ INSERT INTO `__prefix__departmentstaff` (`role`, `department`, `person`) VALUES
 ('Coordinator', 13, 0000001110),
 ('Teacher (Curriculum)', 13, 0000002096),
 ('Coordinator', 12, 0000001778),
-('Teacher (Curriculum)', 12, 0000000001),
 ('Teacher (Curriculum)', 12, 0000002134),
 ('Teacher (Curriculum)', 12, 0000001123),
 ('Teacher (Curriculum)', 12, 0000001104),
@@ -122,8 +121,7 @@ INSERT INTO `__prefix__departmentstaff` (`role`, `department`, `person`) VALUES
 ('Assistant Coordinator', 5, 0000000869),
 ('Teacher (Curriculum)', 1, 0000002134),
 ('Teacher (Curriculum)', 11, 0000001601),
-('Teacher (Curriculum)', 4, 0000002562),
-('Teacher (Curriculum)', 2, 0000000001);
+('Teacher (Curriculum)', 4, 0000002562);
 
 ALTER TABLE `__prefix__DepartmentStaff` ENABLE KEYS;
 UNLOCK TABLES;

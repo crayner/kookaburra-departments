@@ -23,8 +23,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @package Kookaburra\Departments\Entity
  * @ORM\Entity(repositoryClass="Kookaburra\Departments\Repository\DepartmentStaffRepository")
  * @ORM\Table(options={"auto_increment": 1}, name="DepartmentStaff",
- *     indexes={@ORM\Index(name="person",columns={"gibbonPersonId"}),@ORM\Index(name="department",columns={"department"})},
- *     uniqueConstraints={@ORM\UniqueConstraint(name="departmentPerson",columns={"department","gibbonPersonID"})})
+ *     indexes={@ORM\Index(name="person",columns={"person"}),@ORM\Index(name="department",columns={"department"})},
+ *     uniqueConstraints={@ORM\UniqueConstraint(name="departmentPerson",columns={"department","person"})})
  * @UniqueEntity({"department","person"})
  */
 class DepartmentStaff implements EntityInterface
@@ -32,7 +32,7 @@ class DepartmentStaff implements EntityInterface
     /**
      * @var integer|null
      * @ORM\Id()
-     * @ORM\Column(type="smallint", columnDefinition="INT(6) UNSIGNED ZEROFILL AUTO_INCREMENT")
+     * @ORM\Column(type="smallint", columnDefinition="INT(6) UNSIGNED AUTO_INCREMENT")
      * @ORM\GeneratedValue
      */
     private $id;

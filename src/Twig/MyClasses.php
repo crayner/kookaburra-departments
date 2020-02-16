@@ -48,7 +48,11 @@ class MyClasses implements SidebarContentInterface
      */
     public function render(array $options): string
     {
-        return $this->getTwig()->render('@KookaburraDepartments/sidebar/my_classes.html.twig', ['classes' => $this]);
+        try {
+            return $this->setContent($this->getTwig()->render('@KookaburraDepartments/sidebar/my_classes.html.twig', ['classes' => $this]))->getContent();
+        } catch (\Twig\Error\LoaderError | \Twig\Error\RuntimeError | \Twig\Error\SyntaxError $e) {
+            return '';
+        }
     }
 
     /**
@@ -69,5 +73,15 @@ class MyClasses implements SidebarContentInterface
     {
         $this->classes = $classes;
         return $this;
+    }
+
+    /**
+     * toArray
+     * @return array
+     */
+    public function toArray(): array
+    {
+        $this->render([]);
+        return ['content' => $this->getContent()];
     }
 }

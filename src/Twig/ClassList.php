@@ -103,4 +103,14 @@ class ClassList implements SidebarContentInterface
         $this->department = $department;
         return $this;
     }
+
+    /**
+     * toArray
+     * @return array
+     */
+    public function toArray(): array
+    {
+        dd($this);
+        return [];
+    }
 }

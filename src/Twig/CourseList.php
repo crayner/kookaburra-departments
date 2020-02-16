@@ -109,4 +109,14 @@ class CourseList implements SidebarContentInterface
         $this->Department = $Department;
         return $this;
     }
+
+    /**
+     * toArray
+     * @return array
+     */
+    public function toArray(): array
+    {
+        dd($this);
+        return [];
+    }
 }

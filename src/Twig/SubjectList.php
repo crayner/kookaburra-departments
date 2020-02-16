@@ -74,4 +74,14 @@ class SubjectList implements SidebarContentInterface
         $this->subjects = $subjects;
         return $this;
     }
+
+    /**
+     * toArray
+     * @return array
+     */
+    public function toArray(): array
+    {
+        dd($this);
+        return [];
+    }
 }

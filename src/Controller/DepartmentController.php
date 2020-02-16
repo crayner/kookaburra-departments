@@ -65,6 +65,8 @@ class DepartmentController extends AbstractController
         }
 
         ProviderFactory::create(CourseClass::class)->getMyClasses($this->getUser(), $sidebar);
+
+        dump($sidebar);
         return $this->render('@KookaburraDepartments/list.html.twig',
             [
                 'departments' => ProviderFactory::getRepository(Department::class)->findBy([], ['name' => 'ASC']),

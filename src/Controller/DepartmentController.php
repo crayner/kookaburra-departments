@@ -351,7 +351,7 @@ class DepartmentController extends AbstractController
                         'action' => $this->generateUrl('departments__edit', ['department' => $department->getId()])
                     ]
                 );
-                $errors[] = ['class' => 'success', 'message' => $translator->trans('Your request was completed successfully.', [], 'messages')];
+                $errors[] = ['class' => 'success', 'message' => $translator->trans('return.success.0', [], 'messages')];
             } else {
                 $errors[] = ['class' => 'error', 'message' => $translator->trans('Your request failed because your inputs were invalid.', [], 'messages')];
                 $status = 'error';
@@ -417,7 +417,7 @@ class DepartmentController extends AbstractController
             $manager->singlePanel($form->createView(), 'DepartmentEdit');
             $data['form'] = $manager->getFormFromContainer('formContent', 'single');
             if ($data['errors'] === []) {
-                $data['errors'][] = ['class' => 'success', 'message' => $translator->trans('Your request was completed successfully.', [], 'messages')];
+                $data['errors'][] = ['class' => 'success', 'message' => $translator->trans('return.success.0', [], 'messages')];
                 $data['status'] = 'success';
             }
         }

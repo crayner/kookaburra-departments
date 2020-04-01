@@ -1,0 +1,65 @@
+Department: Dipartimento
+Departments: Dipartimenti
+'My Classes': 'Le mie Classi'
+'Learning Areas': 'Aree Apprendimento'
+English: Inglese
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: Matematica
+Pastoral: Pastorale
+'Physical Education': 'Educazione Fisica'
+Science: Scienza
+'The Arts': 'The Arts'
+Administration: Amministrazione
+'IT Services': 'IT Services'
+'Individual Needs': 'Esigenze individuali'
+Finance: Finanza
+Library: Biblioteca
+'Subject List': 'Lista Oggetto'
+'Class List': 'Lista Classe'
+General: Generale
+Type: Tipo
+Name: Nome
+Abbreviation: Abbreviation
+'Subject Listing': 'Lista Oggetto'
+Blurb: Descrizione
+Submit: Invia
+Staff: Staff
+'New Staff': 'Nuovo Staff'
+'Use Control, Command and/or Shift to select multiple.': 'Utilizzare il controllo, comando e/o Maiuscolo per selezionare pi&ugrave.'
+Role: Ruolo
+department:
+    type:
+        'learning area': 'Area Apprendimento'
+        administration: Amministrazione
+'Please select...': 'Prego seleziona...'
+'Add Department': 'Add Department'
+departmentstaff:
+    role:
+        coordinator: Coordinatore
+        'assistant coordinator': 'Assistente Coordinatore'
+        'teacher (curriculum)': 'Professore (Curriculum)'
+        teacher: Insegnante
+        director: Direttore
+        manager: Manager
+        administrator: Amministratore
+        other: Altro
+'Department Access': 'Gestione Dipartimento'
+'Make Departments Public': 'Rendere Dipartimenti Pubblici'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': 'Area Apprendimento'
+Edit: Modifica
+Delete: Elimina
+None: Nessuno
+Actions: Azioni
+'There are no records to display.': 'Non ci sono record da mostrare.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'Modifica Dipartimento'
+'Manage Departments': 'Gestisci Dipartimenti'
+'View Departments': 'Visualizza Dipartimenti'
+'Module Menu': 'Menu Moduli'

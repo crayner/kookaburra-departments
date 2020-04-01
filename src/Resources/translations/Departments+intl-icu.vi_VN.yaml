@@ -1,0 +1,65 @@
+Department: 'Ngành'
+Departments: 'Các phòng ban'
+'My Classes': 'Các lớp học của tôi'
+'Learning Areas': 'Các Môn Học'
+English: 'Tiếng Anh'
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: 'Toán học'
+Pastoral: 'Mục vụ'
+'Physical Education': 'Vật lí học'
+Science: 'Khoa học'
+'The Arts': 'The Arts'
+Administration: 'Quản trị'
+'IT Services': 'IT Services'
+'Individual Needs': 'Các Nhu cầu Cá nhân'
+Finance: 'Tài chính'
+Library: 'Thư viện'
+'Subject List': 'Danh sách Chủ đề'
+'Class List': 'Danh sách Lớp'
+General: Chung
+Type: Kiểu
+Name: Tên
+Abbreviation: Abbreviation
+'Subject Listing': 'Danh sách chủ đề'
+Blurb: 'Lời giới thiệu'
+Submit: Gửi
+Staff: 'Nhân Viên'
+'New Staff': 'Nhân viên mới'
+'Use Control, Command and/or Shift to select multiple.': 'Sử dung Control, Command và/hoặc Shift để chọn nhiều.'
+Role: 'Vai trò'
+department:
+    type:
+        'learning area': 'Khu vực học tập'
+        administration: 'Quản trị'
+'Please select...': 'Xin vui lòng chon...'
+'Add Department': 'Add Department'
+departmentstaff:
+    role:
+        coordinator: 'Điều phối viên'
+        'assistant coordinator': 'Chương trình hỗ trợ điều phối viên'
+        'teacher (curriculum)': 'Giáo viên (giáo trình)'
+        teacher: 'Giáo Viên'
+        director: 'Giám đốc'
+        manager: 'Quản lí'
+        administrator: 'Người quản trị'
+        other: Khác
+'Department Access': 'Bộ phận Tiếp Cận'
+'Make Departments Public': 'Làm cho Các Phòng ban được Công khai'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': 'Khu vực học tập'
+Edit: 'Chỉnh Sửa'
+Delete: Xóa
+None: Không
+Actions: 'Thao tác'
+'There are no records to display.': 'Không có ghi chép nào thể hiện.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'Sửa Phòng ban'
+'Manage Departments': 'Quản lý các phòng ban'
+'View Departments': 'Xem Các phòng ban'
+'Module Menu': 'Mo-dun Menu'

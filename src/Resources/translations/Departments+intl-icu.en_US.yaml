@@ -1,0 +1,65 @@
+Department: Department
+Departments: Departments
+'My Classes': 'My Classes'
+'Learning Areas': 'Learning Areas'
+English: English
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: Mathematics
+Pastoral: Pastoral
+'Physical Education': 'Physical Education'
+Science: Science
+'The Arts': 'The Arts'
+Administration: Administration
+'IT Services': 'IT Services'
+'Individual Needs': 'Individual Needs'
+Finance: Finance
+Library: Library
+'Subject List': 'Subject List'
+'Class List': 'Class List'
+General: General
+Type: Type
+Name: Name
+Abbreviation: Abbreviation
+'Subject Listing': 'Subject Listing'
+Blurb: Blurb
+Submit: Submit
+Staff: Staff
+'New Staff': 'New Staff'
+'Use Control, Command and/or Shift to select multiple.': 'Use Control, Command and/or Shift to select multiple.'
+Role: Role
+department:
+    type:
+        'learning area': 'Learning Area'
+        administration: Administration
+'Please select...': 'Please select...'
+'Add Department': 'Add Department'
+departmentstaff:
+    role:
+        coordinator: Coordinator
+        'assistant coordinator': 'Assistant Coordinator'
+        'teacher (curriculum)': 'Teacher (Curriculum)'
+        teacher: Teacher
+        director: Director
+        manager: Manager
+        administrator: Administrator
+        other: Other
+'Department Access': 'Department Access'
+'Make Departments Public': 'Make Departments Public'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': 'Learning Area'
+Edit: Edit
+Delete: Delete
+None: None
+Actions: Actions
+'There are no records to display.': 'There are no records to display.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'Edit Department'
+'Manage Departments': 'Manage Departments'
+'View Departments': 'View Departments'
+'Module Menu': 'Module Menu'

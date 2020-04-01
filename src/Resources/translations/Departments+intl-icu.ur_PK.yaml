@@ -1,0 +1,65 @@
+Department: شعبہ
+Departments: شعبے
+'My Classes': 'میری کلاسیں'
+'Learning Areas': 'لرننگ ایریا'
+English: انگش
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: ریاضی
+Pastoral: Pastoral
+'Physical Education': 'فیزیکل ایجوکیشن'
+Science: سائنس
+'The Arts': 'The Arts'
+Administration: ایڈمنسٹریشن
+'IT Services': 'IT Services'
+'Individual Needs': 'انفرادی ضروریات'
+Finance: فائنانس
+Library: لائبریری
+'Subject List': 'سبجیکٹ لسٹ'
+'Class List': 'کلاس لسٹ'
+General: General
+Type: قسم
+Name: نام
+Abbreviation: Abbreviation
+'Subject Listing': 'مضامین کی فہرست'
+Blurb: بلرب
+Submit: 'جمع کریں'
+Staff: عملہ
+'New Staff': 'نیا اسٹاف'
+'Use Control, Command and/or Shift to select multiple.': 'ایک سے زیادہ کو منتخب کرنے کے لیے ، کنٹرول اور/ یا شفٹ کا استعمال کریں۔'
+Role: رول
+department:
+    type:
+        'learning area': 'لرننگ ایریا'
+        administration: ایڈمنسٹریشن
+'Please select...': 'براہ مہربانی منتخب کریں۔۔۔۔'
+'Add Department': 'شعبہ شامل کریں'
+departmentstaff:
+    role:
+        coordinator: کوآرڈینیٹر
+        'assistant coordinator': 'اسسٹنٹ کوآرڈینیٹر'
+        'teacher (curriculum)': 'ٹیچر (نصاب)'
+        teacher: استاد
+        director: ڈائریکٹر
+        manager: مینیجر
+        administrator: منتظم
+        other: دوسرے
+'Department Access': 'Department Access'
+'Make Departments Public': 'Make Departments Public'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': 'لرننگ ایریا'
+Edit: 'ترمیم کریں'
+Delete: 'حزف کریں'
+None: 'کوئی نہیں'
+Actions: ایکشنز
+'There are no records to display.': 'دکھانے کے لئے کوئی ریکارڈ نہیں ہے.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'شعبہ میں تبدیلی کریں'
+'Manage Departments': 'منظم کریں محکموں کو'
+'View Departments': 'شعبے دیکھیں'
+'Module Menu': 'ماڈیول مینیو'

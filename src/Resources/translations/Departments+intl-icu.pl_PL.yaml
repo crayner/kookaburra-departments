@@ -1,0 +1,65 @@
+Department: Departament
+Departments: 'Pomieszczenia klasowe'
+'My Classes': 'Moje lekcje'
+'Learning Areas': 'Obszary uczenia się'
+English: 'język angielski'
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: Matematyka
+Pastoral: Świetlica
+'Physical Education': 'Wychowanie fizyczne'
+Science: Nauka
+'The Arts': 'The Arts'
+Administration: Administracja
+'IT Services': 'IT Services'
+'Individual Needs': 'Indywidualne potrzeby'
+Finance: Finanse
+Library: Biblioteka
+'Subject List': 'Lista tematów'
+'Class List': 'Lista klas'
+General: Generał
+Type: Typ
+Name: Nazwa
+Abbreviation: Abbreviation
+'Subject Listing': 'Lista tematów'
+Blurb: 'reklama  wydawnicza'
+Submit: Zatwierdź
+Staff: Pracownicy
+'New Staff': 'Nowy personel'
+'Use Control, Command and/or Shift to select multiple.': 'Użyj Control, Command i / lub Shift, aby wybrać wiele.'
+Role: Rola
+department:
+    type:
+        'learning area': 'Obszar nauki'
+        administration: Administracja
+'Please select...': Wybierz....
+'Add Department': 'Dodaj dział'
+departmentstaff:
+    role:
+        coordinator: Coordynator
+        'assistant coordinator': 'Asystent coordynatora'
+        'teacher (curriculum)': Wychowawca
+        teacher: Nauczyciel
+        director: Dyrektor
+        manager: Zarząd
+        administrator: Administrator
+        other: Inne
+'Department Access': 'Dostęp do działu'
+'Make Departments Public': 'Uczyń dział publicznymi'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Czy informacje o wydziałach powinny być udostępniane publicznie za pośrednictwem strony głównej dziennika?'
+'Learning Area': 'Obszar nauki'
+Edit: Edytować
+Delete: Usuń
+None: Żaden
+Actions: Akcja
+'There are no records to display.': 'Brak zawartości do wyświetlenia.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'Zmień dział'
+'Manage Departments': 'Zarządzaj działami'
+'View Departments': 'Zobacz klasy'
+'Module Menu': 'Menu modułu'

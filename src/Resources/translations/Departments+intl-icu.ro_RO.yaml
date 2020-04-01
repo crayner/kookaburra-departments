@@ -1,0 +1,65 @@
+Department: Departament
+Departments: Discipline
+'My Classes': 'Clasele mele'
+'Learning Areas': 'Domenii de învățare'
+English: Purtare
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: 'Disciplina 18'
+Pastoral: Dirigenție
+'Physical Education': 'Disciplina 28'
+Science: 'Disciplina 34'
+'The Arts': 'The Arts'
+Administration: Administrare
+'IT Services': 'IT Services'
+'Individual Needs': 'Nevoi individuale'
+Finance: Financiar
+Library: Biblioteca
+'Subject List': 'Listă Subiect'
+'Class List': 'Listare Clasă'
+General: 'General '
+Type: Tip
+Name: Nume
+Abbreviation: Abbreviation
+'Subject Listing': 'Listă subiecte'
+Blurb: 'Prezentare, introducere'
+Submit: Trimite
+Staff: Responsabil
+'New Staff': 'Personal nou'
+'Use Control, Command and/or Shift to select multiple.': 'Utilizați tasta Ctrl  și / sau Shift pentru a selecta mai multe ..'
+Role: Rol
+department:
+    type:
+        'learning area': 'Zona de învățare'
+        administration: Administrare
+'Please select...': 'Vă rugăm selectați....'
+'Add Department': 'Add Department'
+departmentstaff:
+    role:
+        coordinator: Coordonator
+        'assistant coordinator': 'Asistent Coordonator'
+        'teacher (curriculum)': 'Profesor (Curriculum)'
+        teacher: Profesor
+        director: Director
+        manager: Manager
+        administrator: 'Administrator '
+        other: Diverse
+'Department Access': 'Acces departament'
+'Make Departments Public': 'Creați  Departamente publice'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': 'Zona de învățare'
+Edit: Editare
+Delete: Șterge
+None: Nimic
+Actions: Acțiuni
+'There are no records to display.': 'Nu există înregistrări de afișat'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'Editează Departament'
+'Manage Departments': 'Administrare Discipline'
+'View Departments': 'Afișare discipline'
+'Module Menu': 'Meniu Modul'

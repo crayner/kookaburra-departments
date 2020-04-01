@@ -1,0 +1,65 @@
+Department: القسم
+Departments: الأقسام
+'My Classes': حصصي
+'Learning Areas': 'مجالات التعلم'
+English: الإنجليزية
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: الرياضيات
+Pastoral: 'أدب ريفي'
+'Physical Education': 'التربية البدنية'
+Science: العلوم
+'The Arts': 'The Arts'
+Administration: إدارة
+'IT Services': 'IT Services'
+'Individual Needs': 'الاحتياجات الفردية'
+Finance: المالية
+Library: المكتبة
+'Subject List': 'قائمة الموضوع'
+'Class List': 'قائمة الحصص'
+General: عام
+Type: النوع
+Name: الإسم
+Abbreviation: Abbreviation
+'Subject Listing': 'قائمة الموضوع'
+Blurb: التعريف
+Submit: ارسال
+Staff: 'فريق العمل'
+'New Staff': 'فريق عمل جديد'
+'Use Control, Command and/or Shift to select multiple.': 'استخدم مفتاح الكنترول , الكوماند و / أو الـ Shift للتحديد المتعدد .'
+Role: الدور
+department:
+    type:
+        'learning area': 'مجال التعلم'
+        administration: إدارة
+'Please select...': 'يرجى الإختيار...'
+'Add Department': 'Add Department'
+departmentstaff:
+    role:
+        coordinator: المنسق
+        'assistant coordinator': 'منسق مساعد'
+        'teacher (curriculum)': 'المعلم (المناهج الدراسية)'
+        teacher: معلم
+        director: قائد
+        manager: المدير
+        administrator: 'مسؤول النظام'
+        other: أخرى
+'Department Access': 'وصول القسم'
+'Make Departments Public': 'جعل الأقسام عامة'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': 'مجال التعلم'
+Edit: تحرير
+Delete: حذف
+None: 'لا شيء'
+Actions: الإجراءات
+'There are no records to display.': 'لا توجد سجلات لعرضها.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'تحرير القسم'
+'Manage Departments': 'إدارة الأقسام'
+'View Departments': 'عرض الأقسام'
+'Module Menu': 'قائمة الموديول'

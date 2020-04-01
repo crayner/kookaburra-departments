@@ -1,0 +1,65 @@
+Department: 部門
+Departments: 部門
+'My Classes': '我的課堂'
+'Learning Areas': '學習領域'
+English: 英文
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: 數學
+Pastoral: '領導'
+'Physical Education': 體育
+Science: 科學
+'The Arts': 'The Arts'
+Administration: 行政
+'IT Services': 'IT Services'
+'Individual Needs': 個人需要
+Finance: 財經
+Library: 圖書館
+'Subject List': 科目名單
+'Class List': 學生名單
+General: 一般
+Type: 類型
+Name: 名稱
+Abbreviation: Abbreviation
+'Subject Listing': 列表科目
+Blurb: 簡介
+Submit: 提交
+Staff: 員工
+'New Staff': 新員工
+'Use Control, Command and/or Shift to select multiple.': '用 Control, Command 和/或 Shift 去選擇更多。'
+Role: 角色
+department:
+    type:
+        'learning area': '學習領域'
+        administration: 行政
+'Please select...': 請選擇...
+'Add Department': 'Add Department'
+departmentstaff:
+    role:
+        coordinator: 協調員
+        'assistant coordinator': 協調員的助手
+        'teacher (curriculum)': '老師 (課程)'
+        teacher: 老師
+        director: 導演
+        manager: 經理
+        administrator: 管理員
+        other: 其他
+'Department Access': 部門接駁
+'Make Departments Public': 公開部門
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': '學習領域'
+Edit: 編輯
+Delete: 刪除
+None: 無
+Actions: 行動
+'There are no records to display.': 沒有要顯示的記錄
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 編輯部門
+'Manage Departments': 管理部門
+'View Departments': 觀看部門
+'Module Menu': 程式組件選單

@@ -1,0 +1,65 @@
+Department: หน่วยงาน
+Departments: หน่วยงาน
+'My Classes': ชั้นเรียนของฉัน
+'Learning Areas': พื้นที่การเรียนรู้
+English: อังกฤษ
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: คณิตศาสตร์
+Pastoral: Pastoral
+'Physical Education': พลศึกษา
+Science: วิทยาศาสตร์
+'The Arts': 'The Arts'
+Administration: การบริหาร
+'IT Services': 'IT Services'
+'Individual Needs': ความต้องการส่วนบุคคล
+Finance: การเงิน
+Library: ห้องสมุด
+'Subject List': รายชื่อวิชา
+'Class List': รายชื่อคลาส
+General: ทั่วไป
+Type: 'ประเภท'
+Name: ชื่อ
+Abbreviation: Abbreviation
+'Subject Listing': รายชื่อวิชา
+Blurb: คำประกาศ
+Submit: Submit
+Staff: เจ้าหน้าที่
+'New Staff': พนักงานใหม่
+'Use Control, Command and/or Shift to select multiple.': 'ใช้ Control, Command และ / หรือ Shift เพื่อเลือกหลายรายการ'
+Role: บทบาท
+department:
+    type:
+        'learning area': พื้นที่การเรียนรู้
+        administration: การบริหาร
+'Please select...': โปรดเลือก...
+'Add Department': เพิ่มแผนก
+departmentstaff:
+    role:
+        coordinator: ผู้ประสานงาน
+        'assistant coordinator': ผู้ช่วยผู้ประสานงาน
+        'teacher (curriculum)': 'ครู (หลักสูตร)'
+        teacher: ครู
+        director: ผู้อำนวยการ
+        manager: ผู้จัดการ
+        administrator: ผู้ดูแลระบบ
+        other: อื่นๆ
+'Department Access': การเข้าถึงหน่วยงาน
+'Make Departments Public': ทำให้หน่วยงานเป็นแบบสาธารณะ
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': พื้นที่การเรียนรู้
+Edit: แก้ไข
+Delete: ลบ
+None: ไม่มี
+Actions: แอ็กชั่น
+'There are no records to display.': ไม่มีรายการในการแสดงผล
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': หน้าแรก
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': หน้าสุดท้าย
+'Edit Department': แก้ไขหน่วยงาน
+'Manage Departments': จัดการหน่วยงาน
+'View Departments': ดูหน่วยงาน
+'Module Menu': รายการโมดูล

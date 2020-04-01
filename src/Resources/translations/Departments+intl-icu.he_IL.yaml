@@ -1,0 +1,65 @@
+Department: המחלקה
+Departments: מחלקות
+'My Classes': 'השיעורים שלי'
+'Learning Areas': 'תחומי לימוד'
+English: 'אנגלית'
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: מתמטיקה
+Pastoral: פסטורלי
+'Physical Education': 'חינוך גופני'
+Science: מדע
+'The Arts': 'The Arts'
+Administration: 'מינהל'
+'IT Services': 'IT Services'
+'Individual Needs': 'צרכים אישיים'
+Finance: האוצר
+Library: ספריה
+'Subject List': 'רשימת נושאים'
+'Class List': 'רשימת מחלקות'
+General: כללי
+Type: סוג
+Name: שם
+Abbreviation: Abbreviation
+'Subject Listing': 'רשימת הנושאים'
+Blurb: Blurb
+Submit: שלח
+Staff: צוות
+'New Staff': 'צוות חדש'
+'Use Control, Command and/or Shift to select multiple.': 'השתמש בפקודה Control, Command ו / או Shift לבחירת מרובים.'
+Role: תפקיד
+department:
+    type:
+        'learning area': 'איזור למידה'
+        administration: 'מינהל'
+'Please select...': 'בבקשה לבחור...'
+'Add Department': 'Add Department'
+departmentstaff:
+    role:
+        coordinator: רכז
+        'assistant coordinator': 'עוזר רכז'
+        'teacher (curriculum)': מורה
+        teacher: מורה
+        director: 'מנהל'
+        manager: 'מנהל'
+        administrator: מזכיר
+        other: אחר
+'Department Access': 'נגישות המחלקה'
+'Make Departments Public': 'הפוך את המחלקות לציבוריות'
+'Should department information be made available to the public, via the Gibbon homepage?': 'האם מידע על המחלקה יהיה זמין לציבור, באמצעות דף הבית של גיבון?'
+'Learning Area': 'איזור למידה'
+Edit: ערוך
+Delete: מחק
+None: 'שום דבר'
+Actions: פעולות
+'There are no records to display.': 'אין נתונים להצגה.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'עריכת מחלקה'
+'Manage Departments': 'ניהול מחלקות'
+'View Departments': 'צפה במחלקות'
+'Module Menu': 'תפריט מודול'

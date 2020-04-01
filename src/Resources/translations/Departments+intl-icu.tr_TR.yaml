@@ -1,0 +1,65 @@
+Department: Bölüm
+Departments: Bölümler
+'My Classes': Sınıflarım
+'Learning Areas': 'Öğrenme Alanları'
+English: ingilizce
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: Matematik
+Pastoral: Pastoral
+'Physical Education': 'Beden Eğitimi'
+Science: Bilim
+'The Arts': 'The Arts'
+Administration: yönetim
+'IT Services': 'IT Services'
+'Individual Needs': 'Bireysel ihtiyaçlar'
+Finance: maliye
+Library: Kütüphane
+'Subject List': 'Konu Listesi'
+'Class List': 'Sınıf Listesi'
+General: Genel
+Type: tip
+Name: isim
+Abbreviation: Abbreviation
+'Subject Listing': 'Konu Listesi'
+Blurb: 'kitap kapağındaki övgü yazısı'
+Submit: Gönder
+Staff: Personel
+'New Staff': 'Yeni personel'
+'Use Control, Command and/or Shift to select multiple.': 'Birden fazla seçmek için Kontrol, Komut ve / veya Shift tuşlarını kullanın.'
+Role: rol
+department:
+    type:
+        'learning area': 'Öğrenme alanı'
+        administration: yönetim
+'Please select...': 'Lütfen seçin...'
+'Add Department': 'Bölüm ekle'
+departmentstaff:
+    role:
+        coordinator: koordinatör
+        'assistant coordinator': 'Koordinatör Yardımcısı'
+        'teacher (curriculum)': 'Öğretmen (Müfredat)'
+        teacher: Öğretmen
+        director: yönetmen
+        manager: yönetici
+        administrator: yönetici
+        other: Diğer
+'Department Access': 'Bölüm Erişimi'
+'Make Departments Public': 'Bölümleri Herkese Açık Yap'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Departman bilgileri Gibbon ana sayfasından halka açıklanmalı mıdır?'
+'Learning Area': 'Öğrenme alanı'
+Edit: Düzenle
+Delete: silmek
+None: Yok
+Actions: Eylemler
+'There are no records to display.': 'Gösterilecek kayıt yok.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'Bölümü Düzenle'
+'Manage Departments': 'Bölümleri Yönet'
+'View Departments': 'Bölümleri Görüntüle'
+'Module Menu': 'Modül Menüsü'

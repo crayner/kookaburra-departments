@@ -1,0 +1,65 @@
+Department: 部门
+Departments: 部门
+'My Classes': 我的班级
+'Learning Areas': '学习领域'
+English: 英语
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: 数学
+Pastoral: 牧歌
+'Physical Education': 体育
+Science: 科学
+'The Arts': 'The Arts'
+Administration: 行政
+'IT Services': 'IT Services'
+'Individual Needs': 个人需求
+Finance: 财务
+Library: 图书馆
+'Subject List': 主题列表
+'Class List': 班级名单
+General: 一般
+Type: 类型
+Name: 名称
+Abbreviation: Abbreviation
+'Subject Listing': 学科列表
+Blurb: 导语
+Submit: 提交
+Staff: 员工
+'New Staff': 新员工
+'Use Control, Command and/or Shift to select multiple.': '使用 Control， Command或者Shift 来选择多个。'
+Role: 角色
+department:
+    type:
+        'learning area': '学习领域'
+        administration: 行政
+'Please select...': 请选择...
+'Add Department': '添加部门'
+departmentstaff:
+    role:
+        coordinator: 辅导员
+        'assistant coordinator': 辅导员助理
+        'teacher (curriculum)': 老师（课程）
+        teacher: 老师
+        director: 董事
+        manager: 经理
+        administrator: 管理员
+        other: 其他
+'Department Access': 部门访问
+'Make Departments Public': 公开部门
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': '学习领域'
+Edit: 编辑
+Delete: '删除'
+None: 取消
+Actions: 操作
+'There are no records to display.': '查询 无记录。'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 编辑部门
+'Manage Departments': 管理部门
+'View Departments': 查看部门
+'Module Menu': 模块菜单

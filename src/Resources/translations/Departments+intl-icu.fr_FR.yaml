@@ -1,0 +1,65 @@
+Department: Départements
+Departments: Départements
+'My Classes': 'Mes chapitres'
+'Learning Areas': 'Espaces d''apprentissage'
+English: Anglais
+'Human Technologies': 'Human Technologies'
+Humanities: Humanities
+Languages: Languages
+Mathematics: Mathématiques
+Pastoral: Pastoral
+'Physical Education': 'Education Physique'
+Science: Science
+'The Arts': 'The Arts'
+Administration: Administration
+'IT Services': 'IT Services'
+'Individual Needs': 'Besoins Individuels'
+Finance: Finance
+Library: Librairie
+'Subject List': 'Liste de sujet'
+'Class List': 'liste de module'
+General: Général
+Type: Type
+Name: Nom
+Abbreviation: Abbreviation
+'Subject Listing': 'Liste de sujet'
+Blurb: Blurb
+Submit: Envoyer
+Staff: 'Membre du personnel'
+'New Staff': 'Nouveau membre'
+'Use Control, Command and/or Shift to select multiple.': 'Utilisez Control, touche ET/OU Shift pour sélectioner plusieurs.'
+Role: Profil
+department:
+    type:
+        'learning area': 'Zone d''étude et d''apprentissage'
+        administration: Administration
+'Please select...': Sélectionner...
+'Add Department': 'Add Department'
+departmentstaff:
+    role:
+        coordinator: Coordinateur
+        'assistant coordinator': 'Coordinateur Assistant'
+        'teacher (curriculum)': 'Enseignant (Curriculum)'
+        teacher: Enseignant
+        director: Directeur
+        manager: Gestionnaire
+        administrator: Administrateur
+        other: Autre
+'Department Access': 'Accès département'
+'Make Departments Public': 'Rend les départements public'
+'Should department information be made available to the public, via the Gibbon homepage?': 'Should department information be made available to the public, via the Gibbon homepage?'
+'Learning Area': 'Zone d''étude et d''apprentissage'
+Edit: Modifier
+Delete: Supprimer
+None: Aucun
+Actions: Actions
+'There are no records to display.': 'Il n y a aucun enregistrements à afficher.'
+'Records {start}-{end} of {total}': 'Records {start}-{end} of {total}'
+'First Page': 'First Page'
+'Previous Page': 'Previous Page'
+'Next Page': 'Next Page'
+'Last Page': 'Last Page'
+'Edit Department': 'Modifier un département'
+'Manage Departments': 'Gérer les départements'
+'View Departments': 'Consulter les départements'
+'Module Menu': 'Menu de module'

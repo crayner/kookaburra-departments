@@ -19,7 +19,7 @@ use App\Container\ContainerManager;
 use App\Entity\Course;
 use App\Entity\CourseClass;
 use App\Entity\CourseClassPerson;
-use App\Entity\Setting;
+use Kookaburra\SystemAdmin\Entity\Setting;
 use App\Entity\Unit;
 use App\Manager\ExcelManager;
 use App\Provider\ProviderFactory;

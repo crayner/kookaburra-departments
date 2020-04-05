@@ -67,7 +67,7 @@ class DepartmentPagination extends AbstractPaginationManager
 
         $action = new PaginationAction();
         $action->setTitle('Edit')
-            ->setAClass('')
+            ->setAClass('thickbox p-3 sm:p-0')
             ->setColumnClass('column p-2 sm:p-3')
             ->setSpanClass('fas fa-edit fa-fw fa-1-5x text-gray-700')
             ->setRoute('departments__edit')
@@ -76,7 +76,7 @@ class DepartmentPagination extends AbstractPaginationManager
 
         $action = new PaginationAction();
         $action->setTitle('Delete')
-            ->setAClass('')
+            ->setAClass('thickbox p-3 sm:p-0')
             ->setColumnClass('column p-2 sm:p-3')
             ->setSpanClass('far fa-trash-alt fa-fw fa-1-5x text-gray-700')
             ->setRoute('departments__delete')

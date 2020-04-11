@@ -29,13 +29,12 @@ module:
             categoryPermissionStudent: 'Y'
             categoryPermissionParent: 'Y'
             categoryPermissionOther: 'Y'
-            permissions:
+            roles:
                 - Administrator
                 - Parent
                 - Student
                 - 'Support Staff'
                 - Teacher
-                - Librarian
         'Manage Departments':
             name: 'Manage Departments'
             precedence: 1
@@ -54,5 +53,5 @@ module:
             categoryPermissionStudent: 'N'
             categoryPermissionParent: 'N'
             categoryPermissionOther: 'N'
-            permissions:
+            roles:
                 - Administrator
